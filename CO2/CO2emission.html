@@ -16,7 +16,7 @@
 
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 <!-- Load d3-annotation -->
@@ -533,13 +533,7 @@ function ready(error, topo ,names) {
       .on("mouseover", mouseOver )
       .on("mouseleave", mouseLeave )
 
-    var countries1 = topo.features;
- 
-    annotations = countries1.filter(function(d) {
 
-    console.log(d.properties.name,path.centroid(d.geometry))
-
-    });  
  
 
 
