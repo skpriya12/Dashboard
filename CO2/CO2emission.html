@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<title>test Title</title>
 
 <body> 
 
@@ -23,7 +23,7 @@
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
 <!-- Create an element where the map will take place -->
-<svg id="my_dataviz" width="1200" height="700"></svg>
+<svg id="my_dataviz" width="1400" height="750"></svg>
 
 
 
@@ -39,7 +39,7 @@ var svg = d3.select("svg"),
 
 // Define the div for the tooltip
 var div = d3.select("body").append("div")	
-    .attr("class", "tooltip")				
+    .attr("class", "tooltip")			
     .style("opacity", 0);  
 
 // Map and projection
@@ -95,6 +95,15 @@ svg.append("text")
         .style("text-decoration", "underline")  
         .text("CO2 emissions 2020 (metric tons)");
 
+//Add para
+svg.append("text")
+        .attr("x", 10)             
+        .attr("y", 50)
+        .attr("text-anchor", "left")  
+        .style("font-size", "17px") 
+        .text("Carbon dioxide (CO2) emissions from energy and material production can arise from various sources and fuel type. Below map displays the breakdown of CO2 emissions by fuel type across all countries.")
+
+
 
 // Event listener to the radio button
 d3.select("#Button").on("change", update )
@@ -110,7 +119,7 @@ function update() {
   d3.selectAll(".annotation").remove()
       // For each check box:
   var radioValue = d3.select('input[name="maps"]:checked').property("value");
-  console.log(radioValue)
+  //console.log(radioValue)
   
     
   d3.queue()
@@ -155,20 +164,22 @@ function update() {
           wrap: 200
         },
         type: d3.annotationLabel,
+        color: ["black"],
         dy: 300,
-        dx: 1010,
+        dx: 1200,
         disable: ["connector"]
         
       }
       ,{
         note: {
-          label:"Move over the countries for more details",
+          label:"Move over the countries for more details in bottom left of the screen",
 
-          wrap: 400
+          wrap: 600
         },
         type: d3.annotationLabel,
-        dy: 510,
-        dx: 650,
+        color: ["blue"],
+        dy: 530,
+        dx: 700,
         disable: ["connector"]
         
       }
@@ -201,20 +212,21 @@ function update() {
           wrap: 200
         },
         type: d3.annotationLabel,
-
+        color: ["black"],
         dy: 300,
-        dx: 1010,
+        dx: 1200,
         disable: ["connector"]
       }
       ,{
         note: {
-          label:"Move over the countries for more details",
+          label:"Move over the countries for more details in bottom left of the screen",
 
-          wrap: 400
+          wrap: 600
         },
         type: d3.annotationLabel,
-        dy: 510,
-        dx: 650,
+        color: ["blue"],
+        dy: 530,
+        dx: 700,
         disable: ["connector"]
         
       }
@@ -247,20 +259,21 @@ function update() {
           wrap: 200
         },
         type: d3.annotationLabel,
-
+        color: ["black"],
         dy: 300,
-        dx: 1010,
+        dx: 1200,
         disable: ["connector"]
       }
       ,{
         note: {
-          label:"Move over the countries for more details",
+          label:"Move over the countries for more details in bottom left of the screen",
 
-          wrap: 400
+          wrap: 600
         },
         type: d3.annotationLabel,
-        dy: 510,
-        dx: 650,
+        color: ["blue"],
+        dy: 530,
+        dx: 700,
         disable: ["connector"]
         
       }
@@ -293,20 +306,21 @@ function update() {
           wrap: 200
         },
         type: d3.annotationLabel,
-
+        color: ["black"],
         dy: 300,
-        dx: 1010,
+        dx: 1200,
         disable: ["connector"]
       }
       ,{
         note: {
-          label:"Move over the countries for more details",
+          label:"Move over the countries for more details in bottom left of the screen",
 
-          wrap: 400
+          wrap: 600
         },
         type: d3.annotationLabel,
-        dy: 510,
-        dx: 650,
+        color: ["blue"],
+        dy: 530,
+        dx: 700,
         disable: ["connector"]
         
       }
@@ -339,20 +353,21 @@ function update() {
           wrap: 200
         },
         type: d3.annotationLabel,
-
+        color: ["black"],
         dy: 300,
-        dx: 1010,
+        dx: 1200,
         disable: ["connector"]
       }
       ,{
         note: {
-          label:"Move over the countries for more details",
+          label:"Move over the countries for more details in bottom left of the screen",
 
-          wrap: 400
+          wrap: 600
         },
         type: d3.annotationLabel,
-        dy: 510,
-        dx: 650,
+        color: ["blue"],
+        dy: 530,
+        dx: 700,
         disable: ["connector"]
         
       }
@@ -385,20 +400,21 @@ function update() {
           wrap: 200
         },
         type: d3.annotationLabel,
-
+        color: ["black"],
         dy: 300,
-        dx: 1010,
+        dx: 1200,
         disable: ["connector"]
       }
       ,{
         note: {
-          label:"Move over the countries for more details",
+          label:"Move over the countries for more details in bottom left of the screen",
 
-          wrap: 400
+          wrap: 600
         },
         type: d3.annotationLabel,
-        dy: 510,
-        dx: 650,
+        color: ["blue"],
+        dy: 530,
+        dx: 700,
         disable: ["connector"]
         
       }
